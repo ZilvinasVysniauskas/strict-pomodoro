@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "Pomodoro extension",
-    "description": "Pomodoro extention and task manager",
+    "name": "strict pomodoro",
+    "description": "Pomodoro extension with websites restrictions",
     "version": "1.0.0",
     "action": {
         "default_popup": "popup.html",

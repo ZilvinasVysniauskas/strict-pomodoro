@@ -1,0 +1,28 @@
+@import "../common";
+
+#unique-identifier-440567360256974571514025536219-myPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: $lightRed;
+    z-index: 1000;
+    text-align: center;
+    color: white;
+    width: 500px;
+    word-break: break-all;
+
+    div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    button {
+        margin: 10px;
+        min-width: 250px;
+        padding: 10px 15px;
+    }
+}

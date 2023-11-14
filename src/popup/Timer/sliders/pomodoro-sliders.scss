@@ -1,0 +1,64 @@
+@import "../../../common";
+
+
+#sliderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
+  width: 95vw;
+  height: 55px;
+  padding: 15px;
+  background: $primaryGreen;
+  border-radius: 10px;
+  @include custom-outer-shadow ;
+}
+
+#pomodoroTime {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 50px;
+  height: 40px;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  background-color: $primaryGreen;
+  @include custom-inner-shadow
+}
+
+#pomodoroSlider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 90vw;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  height: 20px;
+  background-color: $primaryGreen;
+  @include custom-inner-shadow;
+
+  &:focus {
+    @include custom-focus-shadow;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    position: relative;
+    top: -30%;
+    width: 35px;
+    height: 35px;
+    background-color: $primaryGreen;
+    border-radius: 50%;
+    @include custom-outer-shadow;
+  }
+}
+
+.time-input {
+  border: 1px solid #ccc;
+  padding: 5px;
+  font-size: 16px;
+}

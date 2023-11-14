@@ -1,0 +1,72 @@
+@font-face {
+    font-family: "Segment7";
+    src: url(../../../static/fonts/Segment7-4Gml.otf);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+#timerContainer {
+    transform: perspective(800px) translateX(1px) rotateY(var(--rotateY, -4deg)) rotateX(var(--rotateX, 23deg));
+    transform-style: preserve-3d;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.main-clock {
+    width: 500px;
+    height: 180px;
+    transform-style: preserve-3d;
+}
+
+.clock-layer {
+    position: absolute;
+    transform: translateZ(var(--tz));
+
+
+    @for $i from 0 to 30 {
+        &:nth-child(#{$i + 1}) {
+            --tz: #{$i * 1.8px};
+            --light: #{$i * 1.6%};
+        }
+    }
+
+    width: 500px;
+    height: 200px;
+    border: 33px solid hsla(358, 70%, 42%, var(--light));
+    border-radius: 15px;
+}
+
+.glass-container {
+    transform-style: preserve-3d;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: translateZ(54px);
+}
+
+.glass-layer {
+    position: absolute;
+    border-radius: 20px;
+    border: 2px solid hsla(0, 20%, 96%, var(--light));
+    width: 500px;
+    height: 203px;
+    transform: translateZ(var(--tz));
+
+
+    @for $i from 0 to 30 {
+        &:nth-child(#{$i + 1}) {
+            --tz: #{$i * 1px};
+            --light: #{8% - $i*0.1 };
+
+            @if $i ==29 {
+                border: none;
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+                backdrop-filter: blur(1px)
+            }
+        }
+    }
+}

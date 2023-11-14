@@ -1,0 +1,95 @@
+@import "../../../../common";
+
+.clock-slot,
+.clock-slot::after,
+.clock-slot::before {
+  font-size: 6rem;
+}
+
+#clockSlotsContainer {
+  background-color: $darkRed;
+  width: 480px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  top: 23px;
+  left: 10px;
+  position: absolute;
+  transform: translateZ(12px);
+}
+
+.minutes-container,
+.seconds-container {
+  display: flex;
+}
+
+.clock-slot {
+  margin: 5px;
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: perspective(300px);
+}
+
+.top,
+.bottom,
+.clock-slot.flip::after,
+.clock-slot.flip::before {
+  padding-right: .15em;
+  padding-left: .15em;
+  line-height: 1em;
+  overflow: hidden;
+}
+
+.top,
+.clock-slot.flip::before {
+  padding-top: 0.15em;
+  height: 0.55em;
+  background-color: $red;
+  border-top-right-radius: .05em;
+  border-top-left-radius: .05em;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.bottom,
+.clock-slot.flip::after {
+  height: 0.6em;
+  background-color: $lightRed;
+  display: flex;
+  align-items: flex-end;
+  border-bottom-right-radius: .05em;
+  border-bottom-left-radius: .05em;
+}
+
+.clock-slot.flip::before {
+  position: absolute;
+  content: attr(data-current-number);
+  width: 100%;
+  animation: flip-top 200ms ease-in;
+  transform-origin: bottom;
+}
+
+@keyframes flip-top {
+  100% {
+    transform: rotateX(-90deg);
+  }
+
+}
+
+.clock-slot.flip::after {
+  position: absolute;
+  bottom: 0;
+  content: attr(data-next-number);
+  width: 100%;
+  animation: flip-bottom 200ms ease-out 200ms;
+  transform-origin: top;
+  transform: rotateX(90deg);
+}
+
+@keyframes flip-bottom {
+  100% {
+    transform: rotateX(0deg);
+  }
+}

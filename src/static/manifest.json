@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Pomodoro extension",
+    "description": "Pomodoro extention and task manager",
+    "version": "1.0.0",
+    "action": {
+        "default_popup": "popup.html",
+        "default_tile": "Pomodoro Extension",
+        "default_icon": "clock.png"
+    },
+    "icons": {
+        "16": "clock.png",
+        "48": "clock.png",
+        "128": "clock.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "alarms",
+        "storage",
+        "notifications",
+        "scripting",
+        "tabs",
+        "activeTab"
+    ]
+}

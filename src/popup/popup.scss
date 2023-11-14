@@ -1,0 +1,58 @@
+@import "../common";
+
+body {
+  width: 580px;
+  height: 500px;
+  background: $background;
+  background: $background;
+  color: white;
+  user-select: none;
+  font-family: "Segment7", serif;
+}
+
+#navigationContainer {
+  color: black;
+  font-size: 1.2rem;
+  font-family: "Roboto Thin", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 5px;
+  align-items: center;
+  background-color: $primaryWhite;
+  border-radius: 10px;
+  width: 70vw;
+  margin-right: auto;
+  margin-left: auto;
+  @include custom-outer-shadow;
+  input {
+    display: none;
+  }
+
+  label {
+    text-align: center;
+    width: 50%;
+    z-index: 2;
+  }
+
+  #checker {
+    content: '';
+    position: absolute;
+    width: 218px;
+    height: 24px;
+    background-color: $primaryGreen;
+    top: 7px;
+    z-index: 1;
+    border-radius: 10px;
+    transition: left 0.3s ease-out;
+    left: 289px;
+
+  }
+
+
+  #navigationButtonTimer:checked + #checker {
+    left: 89px;
+  }
+}
+

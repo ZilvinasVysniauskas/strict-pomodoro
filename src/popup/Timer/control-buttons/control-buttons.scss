@@ -1,0 +1,49 @@
+@import "../../../common";
+
+#timerButtonsContainer {
+  width: 175px;
+  height: 130px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  button {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+#startPauseButton {
+  background-color: $primaryGreen;
+
+  img {
+    width: 30%;
+    content: url('../../../static/icons/play.svg')
+  }
+
+  &:hover {
+    background-color: #7bf09ebd
+  }
+}
+
+#startPauseButton.pause {
+  background-color: #e5e5e5;
+
+  img {
+    content: url('../../../static/icons/pause.svg');
+  }
+
+  &:hover {
+    background-color: #d3d3d3;
+  }
+}
+
+#resetButton {
+  img {
+    width: 45%;
+  }
+}

@@ -1,0 +1,52 @@
+$background: #ff8888;
+$primaryGreen: #33d564bd;
+$primaryWhite: #f1eded;
+$darkRed: #721114;
+$red: #B72025;
+$lightRed: #cf242a;
+$lightGreen: #7bf09ebd;
+
+@mixin custom-inner-shadow {
+  box-shadow: inset -2px -2px 8px white, inset 2px 2px 8px rgba(black, 0.5);
+}
+
+@mixin custom-focus-shadow {
+  box-shadow: inset 0px -2px 0px white, inset 2px 2px 8px rgba(0, 0, 0, 0.5)
+}
+
+@mixin custom-outer-shadow {
+  box-shadow: -1px -1px 2px white, 1px 1px 2px rgba(black, 0.3);
+}
+
+@mixin button {
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  @include custom-outer-shadow;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+.action-button {
+  @include button;
+  background-color: $primaryGreen;
+  &:hover {
+    background-color: $lightGreen;
+  }
+}
+
+.negative-button {
+  @include button;
+  background-color: $red;
+  &:hover {
+    background-color: $lightRed;
+  }
+}

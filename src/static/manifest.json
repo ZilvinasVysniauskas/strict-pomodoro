@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "strict pomodoro",
     "description": "Pomodoro extension with websites restrictions",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "action": {
         "default_popup": "popup.html",
         "default_tile": "Pomodoro Extension",
@@ -23,5 +23,6 @@
         "scripting",
         "tabs",
         "activeTab"
-    ]
+    ],
+    "host_permissions": ["*://*/*"]
 }

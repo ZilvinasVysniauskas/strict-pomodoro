@@ -8,7 +8,6 @@ const timerContainerId = 'timerContainer'
 const timerButtonsContainerId = 'timerButtonsContainer'
 const sliderContainerId = 'sliderContainer'
 
-
 export function setUpTimer(containerId: string): void {
     document.getElementById(containerId).innerHTML = getInnerHTML()
     loadClockUI(timerContainerId)

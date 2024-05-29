@@ -6,9 +6,7 @@ import {setTimerToTime} from "../timer-ui/timer-slots/timer-slots"
 let slider: HTMLInputElement;
 let pomodoroTime: HTMLElement
 
-
 export function loadSliders(slidersContainer: string) {
-
     chrome.storage.sync.get(
         ChromeStorageKeys.pomodoroTime,
         (result) => {

@@ -1,4 +1,4 @@
-import { setUpTimer } from './Timer/timer'
+import {setUpTimer} from './Timer/timer'
 
 import './popup.scss'
 import {setUpWebsitesOptions} from "./ForbiddenPages/forbidden-websites"
@@ -6,7 +6,6 @@ import {setUpWebsitesOptions} from "./ForbiddenPages/forbidden-websites"
 const currentPageId = 'currentPage'
 const navigationButtonWebsitesId = 'navigationButtonWebsites'
 const navigationButtonTimerId = 'navigationButtonTimer';
-
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('body').innerHTML = getInnerHTML()
@@ -23,9 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     })
-
 });
-
 
 function getInnerHTML() {
     return `

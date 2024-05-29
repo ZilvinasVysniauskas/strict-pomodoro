@@ -1,7 +1,6 @@
 import './forbidden-websites.scss'
 import {ChromeStorageKeys} from "../../constants"
 
-
 let list: HTMLElement
 let websiteInput: HTMLInputElement
 

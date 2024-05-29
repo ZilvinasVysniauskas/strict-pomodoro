@@ -3,7 +3,6 @@ import { type ChromeMessage, MessageTypes } from '../../types'
 import { startTimerPenalty, stopTimerPenalty } from './timer'
 import {ChromeStorageKeys} from "../../constants"
 
-
 chrome.runtime.onMessage.addListener(closeTabLister)
 
 export function addTabsListers (): void {

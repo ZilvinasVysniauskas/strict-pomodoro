@@ -78,8 +78,6 @@ function alarmsListener(alarm: any) {
     }
 }
 
-
-
 async function updateCountInComponent(isOver: boolean): Promise<void> {
     try {
         // @ts-expect-error. getContexts is not yet defined in @types/chrome(0.0.251), remove after update
@@ -105,7 +103,6 @@ function getCurrentTimeListener(msg: ChromeMessage, _sender: any, sendResponse: 
         sendResponse({timeLeft: timeLeftInSeconds});
     }
 }
-
 
 function initializePomodoroTime(): void {
     chrome.storage.sync.get(
